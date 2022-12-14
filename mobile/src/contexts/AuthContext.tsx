@@ -28,7 +28,7 @@ interface AuthProviderProps {
   const [isUserLoading, setIsUserLoading] = useState(false)
 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    clientId: '1094449304888-10gqjpslgmcqhcs7cr419cdeg6h42cqv.apps.googleusercontent.com',
+    clientId: process.env.CLIENT_ID,
     redirectUri: AuthSession.makeRedirectUri({useProxy: true}),
     scopes: ['profile', 'email']
   });

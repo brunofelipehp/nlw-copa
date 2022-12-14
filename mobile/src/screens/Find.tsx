@@ -38,6 +38,8 @@ export function Find() {
         })
       
       navigate('pools')
+
+      setIsLoading(false)
       
     } catch (error) {
       console.log(error)
